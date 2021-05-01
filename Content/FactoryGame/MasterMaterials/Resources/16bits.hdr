@@ -1,0 +1,5 @@
+#?RADIANCE
+FORMAT=32-bit_rle_rgbe
+
+-Y 32 +X 32
+€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€ûûû€ööö€ððð€ééé€âââ€ÚÚÚ€ÑÑÑ€ÈÈÈ€¿¿¿€µµµ€«««€¡¡¡€———€ŒŒŒ€‚‚‚€ïïï€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€ÿÿÿ€úúú€õõõ€ïïï€èèè€ààà€ØØØ€ÐÐÐ€ÇÇÇ€¾¾¾€´´´€ªªª€   €•••€‹‹‹€€€€€ììì×××€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€ÿÿÿ€úúú€ôôô€îîî€ççç€ßßß€×××€ÏÏÏ€ÆÆÆ€¼¼¼€²²²€¨¨¨€žžž€”””€‰‰‰€þþþéééÔÔÔ¿¿¿€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€þþþ€ùùù€óóó€ííí€æææ€ÞÞÞ€ÖÖÖ€ÍÍÍ€ÄÄÄ€»»»€±±±€§§§€€’’’€ˆˆˆ€ûûûæææÑÑÑ¼¼¼¨¨¨€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€ýýý€øøø€òòò€ììì€ååå€ÝÝÝ€ÕÕÕ€ÌÌÌ€ÃÃÃ€¹¹¹€¯¯¯€¥¥¥€›››€€†††€÷÷÷âââÍÍÍ¹¹¹¤¤¤‘‘‘€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€üüü€÷÷÷€ñññ€ëëë€ããã€ÜÜÜ€ÓÓÓ€ÊÊÊ€ÁÁÁ€¸¸¸€®®®€¤¤¤€™™™€€„„„€ôôôßßßÊÊÊ¶¶¶¡¡¡ŽŽŽööö~€€€€€€€€€€€€€€€€€€€€€€€€€€€üüü€ööö€ððð€êêê€âââ€ÚÚÚ€ÒÒÒ€ÉÉÉ€ÀÀÀ€¶¶¶€¬¬¬€¢¢¢€˜˜˜€€ƒƒƒ€ñññÜÜÜÇÇÇ²²²žžž‹‹‹ððð~ËËË~€€€€€€€€€€€€€€€€€€€€€€€€ûûû€õõõ€ïïï€èèè€ááá€ÙÙÙ€ÑÑÑ€ÈÈÈ€¾¾¾€µµµ€«««€   €–––€ŒŒŒ€€îîîÙÙÙÄÄÄ¯¯¯›››ˆˆˆêêê~ÆÆÆ~£££~€€€€€€€€€€€€€€€€€€ÿÿÿ€úúú€õõõ€îîî€ççç€ààà€ØØØ€ÏÏÏ€ÆÆÆ€½½½€³³³€©©©€ŸŸŸ€•••€ŠŠŠ€€€€€êêêÕÕÕÁÁÁ¬¬¬˜˜˜………åäå~ÁÁÁ~žžž~ýýý}€€€€€€€€€€€€€€€þþþ€ùùù€ôôô€ííí€æææ€ßßß€×××€ÎÎÎ€ÅÅÅ€»»»€²²²€¨¨¨€€“““€ˆˆˆ€üüüçççÒÒÒ¾¾¾©©©•••‚‚‚ßßß~»»»~™™™~óóó}¸¸¸}€€€€€€€€€€€€ýýý€øøø€óóó€ììì€ååå€ÝÝÝ€ÕÕÕ€ÍÍÍ€ÃÃÃ€ººº€°°°€¦¦¦€œœœ€‘‘‘€‡‡‡€ùùùäääÏÏÏººº¦¦¦’’’þþþ~ÙÙÙ~¶¶¶~”””~ééé}¯¯¯}óóó|€€€€€€€€€ýýý€øøø€òòò€ëëë€äää€ÜÜÜ€ÔÔÔ€ËËË€ÂÂÂ€¸¸¸€¯¯¯€¤¤¤€ššš€€………€öööáááÌÌÌ···£££ùùù~ÔÔÔ~°°°~~ààà}¦¦¦}ããã|…„„|€€€€€€üüü€÷÷÷€ñññ€êêê€ããã€ÛÛÛ€ÓÓÓ€ÊÊÊ€ÁÁÁ€···€­­­€£££€™™™€ŽŽŽ€„„„€óóóÞÞÞÉÉÉ´´´   ŒŒŒóóó~ÎÎÎ~«««~ŠŠŠ~×××}žžž}ÔÔÔ|îîî{™™™z€€€ûûû€ööö€ððð€ééé€âââ€ÚÚÚ€ÑÑÑ€ÈÈÈ€¿¿¿€µµµ€«««€¡¡¡€———€ŒŒŒ€‚‚‚€ïïïÚÚÚÅÅÅ±±±‰‰‰ííí~ÉÉÉ~¦¦¦~………~ÎÎÎ}•••}ÅÄÄ|ÔÓÓ{Ø×Øy€€€rúúú€õõõ€ïïï€èèè€ààà€ØØØ€ÐÐÐ€ÇÇÇ€¾¾¾€´´´€ªªª€   €•••€‹‹‹€€€€€ììì×××ÂÂÂ®®®ššš†††ççç~ÃÃÃ~¡¡¡~€€€~ÅÅÅ}}¶¶¶|¹¹¹{üüþx€€€r€€€rôôô€îîî€ççç€ßßß€×××€ÏÏÏ€ÆÆÆ€¼¼¼€²²²€¨¨¨€žžž€”””€‰‰‰€þþþéééÔÔÔ¿¿¿«««———ƒƒƒâââ~¾¾¾~œœœ~øøø}¼¼¼}………}¨¨¨|¡¡¡{¤  w€€€r€€€r€€€rííí€æææ€ÞÞÞ€ÖÖÖ€ÍÍÍ€ÄÄÄ€»»»€±±±€§§§€€’’’€ˆˆˆ€ûûûæææÑÑÑ¼¼¼¨¨¨”””€€€ÜÜÜ~¹¹¹~–––~îîî}³³³}ûúú|™™™|ˆˆˆ{€€€r€€€r€€€r€€€r€€€rååå€ÝÝÝ€ÕÕÕ€ÌÌÌ€ÃÃÃ€¹¹¹€¯¯¯€¥¥¥€›››€€†††€÷÷÷âââÍÍÍ¹¹¹¤¤¤‘‘‘ûûû~ÖÖÖ~³³³~’’’~ååå}ªªª}ëëë|‹‹‹|ßßßz€€€r€€€r€€€r€€€r€€€r€€€rÜÜÜ€ÓÓÓ€ÊÊÊ€ÁÁÁ€¸¸¸€®®®€¤¤¤€™™™€€„„„€ôôôßßßÊÊÊ¶¶¶¡¡¡ŽŽŽööö~ÑÑÑ~®®®~~ÜÜÜ}¢¢¢}ÛÛÛ|ûûû{°¯°z€€€r€€€r€€€r€€€r€€€r€€€r€€€rÒÒÒ€ÉÉÉ€ÀÀÀ€¶¶¶€¬¬¬€¢¢¢€˜˜˜€€ƒƒƒ€ñññÜÜÜÇÇÇ²²²žžž‹‹‹ððð~ËËË~¨¨¨~ˆˆˆ~ÒÒÒ}ššš}ÌÌÌ|ááá{z€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€rÈÈÈ€¾¾¾€µµµ€«««€   €–––€ŒŒŒ€€îîîÙÙÙÄÄÄ¯¯¯›››ˆˆˆêêê~ÆÆÆ~£££~ƒƒƒ~ÉÉÉ}‘‘‘}½½½|ÇÇÇ{­¬¬y€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r½½½€³³³€©©©€ŸŸŸ€•••€ŠŠŠ€€€€€êêêÕÕÕÁÁÁ¬¬¬˜˜˜………ääå~ÁÁÁ~žžž~ýýý}ÀÀÀ}‰‰‰}¯¯¯|­­­{ªªªx€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r²²²€¨¨¨€€“““€ˆˆˆ€üüüçççÒÒÒ¾¾¾©©©•••‚‚‚ßßß~»»»~™™™~óóó}¸¸¸}}   |”””{€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r¦¦¦€œœœ€‘‘‘€‡‡‡€ùùùäääÏÏÏººº¦¦¦’’’þþþ~ÙÙÙ~¶¶¶~”””~ééé}¯¯¯}óóó|“““|öööz€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€rššš€€………€öööáááÌÌÌ···£££ùùù~ÔÔÔ~°°°~~ààà}¦¦¦}ããã|…„…|ÈÈÈz€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€rŽŽŽ€„„„€óóóÞÞÞÉÉÉ´´´   ŒŒŒóóó~ÎÎÎ~«««~ŠŠŠ~×××}žžž}ÔÔÔ|îîî{™š™z€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r‚‚‚€ïïïÚÚÚÅÅÅ±±±‰‰‰ííí~ÉÉÉ~¦¦¦~………~ÎÎÎ}•••}ÄÅÅ|ÔÓÓ{×ØØy€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€rììì×××ÂÂÂ®®®ššš†††ççç~ÃÃÃ~¡¡¡~€€€~ÅÅÅ}}¶¶¶|¹¹¹{þþüx€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€rÔÔÔ¿¿¿«««———ƒƒƒâââ~¾¾¾~œœœ~øøø}¼¼¼}………}¨¨¨|¡¡¡{   w€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r¼¼¼¨¨¨”””€€€ÜÜÜ~¹¹¸~–––~îîî}³³³}úûú|™™™|ˆˆˆ{€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r¤¤¤‘‘‘ûûû~ÖÖÖ~³³³~’’’~ååå}ªªª}ëëë|‹‹‹|ßßßz€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€rŽŽŽööö~ÑÑÑ~®®®~~ÜÜÜ}¢¢¢}ÛÛÛ|ûûû{°°°z€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r€€€r

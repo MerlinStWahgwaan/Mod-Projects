@@ -1,0 +1,181 @@
+TwoSided = false
+bDisableDepthTest = false
+bIsMasked = false
+ReferencedTextures[5] =
+{
+    ReferencedTextures[0] = Texture2D'/Game/FactoryGame/Buildable/Factory/PowerPoleWall/Textures/T_PowerPoleWall_Reflection.T_PowerPoleWall_Reflection'
+    ReferencedTextures[1] = Texture2D'/Game/FactoryGame/Buildable/Factory/Train/Track/Textures/TX_TrainTrack_BC.TX_TrainTrack_BC'
+    ReferencedTextures[2] = Texture2D'/Game/FactoryGame/Buildable/Factory/Train/Track/Textures/TX_TrainTrack_N.TX_TrainTrack_N'
+    ReferencedTextures[3] = Texture2D'/Game/FactoryGame/MasterMaterials/Resources/16bits.16bits'
+    ReferencedTextures[4] = TextureCube4'/Engine/EngineResources/GrayDarkTextureCube.GrayDarkTextureCube'
+}
+Expressions[67] = {  }
+CachedExpressionData =
+{
+    Parameters =
+    {
+        Entries[5] =
+        {
+            Entries[0] =
+            {
+                ParameterInfos[7] =
+                {
+                    ParameterInfos[0] = { Name=AO Multi }
+                    ParameterInfos[1] = { Name=AO Pow }
+                    ParameterInfos[2] = { Name=RoughnessMultiplier }
+                    ParameterInfos[3] = { Name=Index }
+                    ParameterInfos[4] = { Name=Emissive Strenght }
+                    ParameterInfos[5] = { Name=PrimaryBias }
+                    ParameterInfos[6] = { Name=SecondaryBias }
+                }
+            }
+            Entries[1] =
+            {
+                ParameterInfos[4] =
+                {
+                    ParameterInfos[0] = { Name=EmissiveColor }
+                    ParameterInfos[1] = { Name=PrimaryPaintedMetal_Color }
+                    ParameterInfos[2] = { Name=SecondaryPaintedMetal_Color }
+                    ParameterInfos[3] = { Name=Emissive Color }
+                }
+            }
+            Entries[2] =
+            {
+                ParameterInfos[5] =
+                {
+                    ParameterInfos[0] = { Name=Position }
+                    ParameterInfos[1] = { Name=Normal }
+                    ParameterInfos[2] = { Name=Albedo }
+                    ParameterInfos[3] = { Name=ReflectionMap }
+                    ParameterInfos[4] = { Name=Orientation }
+                }
+            }
+            Entries[3] = { ParameterInfos[0]={} }
+            Entries[4] = { ParameterInfos[0]={} }
+        }
+        ScalarValues[7] = { 1, 1, 1, 0, 3, 0.25, 0.5 }
+        VectorValues[4] =
+        {
+            VectorValues[0] = { R=0, G=0, B=0, A=0 }
+            VectorValues[1] = { R=0.955973, G=0.300544, B=0.066626, A=1 }
+            VectorValues[2] = { R=0.078187, G=0.109462, B=0.371238, A=1 }
+            VectorValues[3] = { R=1, G=1, B=1, A=0 }
+        }
+        TextureValues[5] =
+        {
+            TextureValues[0] = Texture2D'/Game/FactoryGame/MasterMaterials/Resources/16bits.16bits'
+            TextureValues[1] = Texture2D'/Game/FactoryGame/Buildable/Factory/Train/Track/Textures/TX_TrainTrack_N.TX_TrainTrack_N'
+            TextureValues[2] = Texture2D'/Game/FactoryGame/Buildable/Factory/Train/Track/Textures/TX_TrainTrack_BC.TX_TrainTrack_BC'
+            TextureValues[3] = Texture2D'/Game/FactoryGame/Buildable/Factory/PowerPoleWall/Textures/T_PowerPoleWall_Reflection.T_PowerPoleWall_Reflection'
+            TextureValues[4] = Texture2D'/Game/FactoryGame/MasterMaterials/Resources/16bits.16bits'
+        }
+    }
+    ReferencedTextures[5] =
+    {
+        ReferencedTextures[0] = Texture2D'/Game/FactoryGame/Buildable/Factory/Train/Track/Textures/TX_TrainTrack_BC.TX_TrainTrack_BC'
+        ReferencedTextures[1] = Texture2D'/Game/FactoryGame/Buildable/Factory/PowerPoleWall/Textures/T_PowerPoleWall_Reflection.T_PowerPoleWall_Reflection'
+        ReferencedTextures[2] = Texture2D'/Game/FactoryGame/Buildable/Factory/Train/Track/Textures/TX_TrainTrack_N.TX_TrainTrack_N'
+        ReferencedTextures[3] = TextureCube4'/Engine/EngineResources/GrayDarkTextureCube.GrayDarkTextureCube'
+        ReferencedTextures[4] = Texture2D'/Game/FactoryGame/MasterMaterials/Resources/16bits.16bits'
+    }
+}
+BlendMode = BLEND_Opaque (0)
+OpacityMaskClipValue = 0.333
+CollectedTextureParameters[5] =
+{
+    CollectedTextureParameters[0] =
+    {
+        Texture = Texture2D'/Game/FactoryGame/MasterMaterials/Resources/16bits.16bits'
+        Name = Position
+        Group = None
+    }
+    CollectedTextureParameters[1] =
+    {
+        Texture = Texture2D'/Game/FactoryGame/Buildable/Factory/Train/Track/Textures/TX_TrainTrack_N.TX_TrainTrack_N'
+        Name = Normal
+        Group = None
+    }
+    CollectedTextureParameters[2] =
+    {
+        Texture = Texture2D'/Game/FactoryGame/Buildable/Factory/Train/Track/Textures/TX_TrainTrack_BC.TX_TrainTrack_BC'
+        Name = Albedo
+        Group = None
+    }
+    CollectedTextureParameters[3] =
+    {
+        Texture = Texture2D'/Game/FactoryGame/Buildable/Factory/PowerPoleWall/Textures/T_PowerPoleWall_Reflection.T_PowerPoleWall_Reflection'
+        Name = ReflectionMap
+        Group = None
+    }
+    CollectedTextureParameters[4] =
+    {
+        Texture = Texture2D'/Game/FactoryGame/MasterMaterials/Resources/16bits.16bits'
+        Name = Orientation
+        Group = None
+    }
+}
+CollectedScalarParameters[7] =
+{
+    CollectedScalarParameters[0] = { Value=1, Name=AO Multi, Group=None }
+    CollectedScalarParameters[1] = { Value=1, Name=AO Pow, Group=None }
+    CollectedScalarParameters[2] = { Value=1, Name=RoughnessMultiplier, Group=None }
+    CollectedScalarParameters[3] = { Value=0, Name=Index, Group=None }
+    CollectedScalarParameters[4] = { Value=3, Name=Emissive Strenght, Group=None }
+    CollectedScalarParameters[5] = { Value=0.25, Name=PrimaryBias, Group=None }
+    CollectedScalarParameters[6] = { Value=0.5, Name=SecondaryBias, Group=None }
+}
+CollectedVectorParameters[4] =
+{
+    CollectedVectorParameters[0] =
+    {
+        Value = { R=0, G=0, B=0, A=0 }
+        Name = EmissiveColor
+        Group = None
+    }
+    CollectedVectorParameters[1] =
+    {
+        Value = { R=0.955973, G=0.300544, B=0.066626, A=1 }
+        Name = PrimaryPaintedMetal_Color
+        Group = None
+    }
+    CollectedVectorParameters[2] =
+    {
+        Value = { R=0.078187, G=0.109462, B=0.371238, A=1 }
+        Name = SecondaryPaintedMetal_Color
+        Group = None
+    }
+    CollectedVectorParameters[3] =
+    {
+        Value = { R=1, G=1, B=1, A=0 }
+        Name = Emissive Color
+        Group = None
+    }
+}
+FlattenedTexture = None
+MobileBaseTexture = None
+MobileNormalTexture = None
+bUseMobileSpecular = false
+MobileSpecularPower = 16
+MobileSpecularMask = MSM_Constant (0)
+MobileMaskTexture = None
+TextureStreamingData[3] =
+{
+    TextureStreamingData[0] =
+    {
+        SamplingScale = 1
+        UVChannelIndex = 0
+        TextureName = T_PowerPoleWall_Reflection
+    }
+    TextureStreamingData[1] =
+    {
+        SamplingScale = 1
+        UVChannelIndex = 0
+        TextureName = TX_TrainTrack_BC
+    }
+    TextureStreamingData[2] =
+    {
+        SamplingScale = 1
+        UVChannelIndex = 0
+        TextureName = TX_TrainTrack_N
+    }
+}

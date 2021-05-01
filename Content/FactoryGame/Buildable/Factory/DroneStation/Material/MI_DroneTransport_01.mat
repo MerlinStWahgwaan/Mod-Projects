@@ -1,0 +1,8 @@
+Diffuse=TX_DroneTransport_BC
+Normal=TX_DroneTransport_N
+Cube=TX_DroneTransport_Refl
+Other[0]=T_PowerPoleWall_Reflection
+Other[1]=TX_TrainTrack_BC
+Other[2]=TX_TrainTrack_N
+Other[3]=16bits
+Other[4]=GrayDarkTextureCube

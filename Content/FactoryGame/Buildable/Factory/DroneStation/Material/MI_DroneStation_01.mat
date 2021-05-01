@@ -1,0 +1,8 @@
+Diffuse=TX_DroneStation_Albedo
+Normal=TX_DroneStation_Normal
+Cube=TX_DroneStation_Reflection
+Other[0]=T_PowerPoleWall_Reflection
+Other[1]=TX_TrainTrack_BC
+Other[2]=TX_TrainTrack_N
+Other[3]=16bits
+Other[4]=GrayDarkTextureCube

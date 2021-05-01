@@ -1,0 +1,298 @@
+NumFrames = 57
+KeyEncodingFormat = AKF_PerTrackCompression (2)
+TranslationCompressionFormat = ACF_Identity (6)
+RotationCompressionFormat = ACF_Identity (6)
+ScaleCompressionFormat = ACF_Identity (6)
+CompressedTrackOffsets[0] = {}
+CompressedScaleOffsets =
+{
+    OffsetData[21] =
+    {
+        OffsetData[0] = 0
+        OffsetData[1] = 700
+        OffsetData[2] = 1060
+        OffsetData[3] = 1436
+        OffsetData[4] = 1584
+        OffsetData[5] = 1732
+        OffsetData[6] = 2108
+        OffsetData[7] = 2256
+        OffsetData[8] = 2404
+        OffsetData[9] = 2440
+        OffsetData[10] = 2476
+        OffsetData[11] = 2512
+        OffsetData[12] = 2548
+        OffsetData[13] = 2584
+        OffsetData[14] = 2620
+        OffsetData[15] = 2892
+        OffsetData[16] = 3160
+        OffsetData[17] = 3536
+        OffsetData[18] = 3912
+        OffsetData[19] = 4060
+        OffsetData[20] = 4208
+    }
+    StripSize = 1
+}
+TrackToSkeletonMapTable[21] =
+{
+    TrackToSkeletonMapTable[0] = { BoneTreeIndex=0 }
+    TrackToSkeletonMapTable[1] = { BoneTreeIndex=1 }
+    TrackToSkeletonMapTable[2] = { BoneTreeIndex=2 }
+    TrackToSkeletonMapTable[3] = { BoneTreeIndex=3 }
+    TrackToSkeletonMapTable[4] = { BoneTreeIndex=4 }
+    TrackToSkeletonMapTable[5] = { BoneTreeIndex=5 }
+    TrackToSkeletonMapTable[6] = { BoneTreeIndex=6 }
+    TrackToSkeletonMapTable[7] = { BoneTreeIndex=7 }
+    TrackToSkeletonMapTable[8] = { BoneTreeIndex=19 }
+    TrackToSkeletonMapTable[9] = { BoneTreeIndex=20 }
+    TrackToSkeletonMapTable[10] = { BoneTreeIndex=8 }
+    TrackToSkeletonMapTable[11] = { BoneTreeIndex=9 }
+    TrackToSkeletonMapTable[12] = { BoneTreeIndex=10 }
+    TrackToSkeletonMapTable[13] = { BoneTreeIndex=11 }
+    TrackToSkeletonMapTable[14] = { BoneTreeIndex=12 }
+    TrackToSkeletonMapTable[15] = { BoneTreeIndex=13 }
+    TrackToSkeletonMapTable[16] = { BoneTreeIndex=14 }
+    TrackToSkeletonMapTable[17] = { BoneTreeIndex=15 }
+    TrackToSkeletonMapTable[18] = { BoneTreeIndex=16 }
+    TrackToSkeletonMapTable[19] = { BoneTreeIndex=17 }
+    TrackToSkeletonMapTable[20] = { BoneTreeIndex=18 }
+}
+CompressedTrackToSkeletonMapTable[21] =
+{
+    CompressedTrackToSkeletonMapTable[0] = { BoneTreeIndex=0 }
+    CompressedTrackToSkeletonMapTable[1] = { BoneTreeIndex=1 }
+    CompressedTrackToSkeletonMapTable[2] = { BoneTreeIndex=2 }
+    CompressedTrackToSkeletonMapTable[3] = { BoneTreeIndex=3 }
+    CompressedTrackToSkeletonMapTable[4] = { BoneTreeIndex=4 }
+    CompressedTrackToSkeletonMapTable[5] = { BoneTreeIndex=5 }
+    CompressedTrackToSkeletonMapTable[6] = { BoneTreeIndex=6 }
+    CompressedTrackToSkeletonMapTable[7] = { BoneTreeIndex=7 }
+    CompressedTrackToSkeletonMapTable[8] = { BoneTreeIndex=19 }
+    CompressedTrackToSkeletonMapTable[9] = { BoneTreeIndex=20 }
+    CompressedTrackToSkeletonMapTable[10] = { BoneTreeIndex=8 }
+    CompressedTrackToSkeletonMapTable[11] = { BoneTreeIndex=9 }
+    CompressedTrackToSkeletonMapTable[12] = { BoneTreeIndex=10 }
+    CompressedTrackToSkeletonMapTable[13] = { BoneTreeIndex=11 }
+    CompressedTrackToSkeletonMapTable[14] = { BoneTreeIndex=12 }
+    CompressedTrackToSkeletonMapTable[15] = { BoneTreeIndex=13 }
+    CompressedTrackToSkeletonMapTable[16] = { BoneTreeIndex=14 }
+    CompressedTrackToSkeletonMapTable[17] = { BoneTreeIndex=15 }
+    CompressedTrackToSkeletonMapTable[18] = { BoneTreeIndex=16 }
+    CompressedTrackToSkeletonMapTable[19] = { BoneTreeIndex=17 }
+    CompressedTrackToSkeletonMapTable[20] = { BoneTreeIndex=18 }
+}
+CompressedCurveData = { FloatCurves[0]={} }
+Interpolation = Linear (0)
+AdditiveAnimType = AAT_None (0)
+RefPoseType = ABPT_AnimFrame (3)
+RetargetSource = None
+RefPoseSeq = AnimSequence4'/Game/FactoryGame/Buildable/Factory/DroneStation/Animation/FlyingIdle_01.FlyingIdle_01'
+RefFrameIndex = 0
+RetargetSourceAssetReferencePose[0] = {}
+bEnableRootMotion = false
+AuthoredSyncMarkers[0] = {}
+BakedPerBoneCustomAttributeData[0] = {}
+Notifies[0] = {}
+SequenceLength = 1.86667
+RateScale = 1
+RawCurveData = { FloatCurves[0]={} }
+Skeleton = Skeleton'/Game/FactoryGame/Buildable/Factory/DroneStation/Mesh/SK_DroneTransport_01_Skeleton.SK_DroneTransport_01_Skeleton'
+
+// Sequence: FlyingBrake_01
+NumFrames = 57
+KeyEncodingFormat = AKF_PerTrackCompression (2)
+TranslationCompressionFormat = ACF_Identity (6)
+RotationCompressionFormat = ACF_Identity (6)
+ScaleCompressionFormat = ACF_Identity (6)
+CompressedTrackOffsets[0] = {}
+CompressedScaleOffsets =
+{
+    OffsetData[21] =
+    {
+        OffsetData[0] = 0
+        OffsetData[1] = 700
+        OffsetData[2] = 1060
+        OffsetData[3] = 1436
+        OffsetData[4] = 1584
+        OffsetData[5] = 1732
+        OffsetData[6] = 2108
+        OffsetData[7] = 2256
+        OffsetData[8] = 2404
+        OffsetData[9] = 2440
+        OffsetData[10] = 2476
+        OffsetData[11] = 2512
+        OffsetData[12] = 2548
+        OffsetData[13] = 2584
+        OffsetData[14] = 2620
+        OffsetData[15] = 2892
+        OffsetData[16] = 3160
+        OffsetData[17] = 3536
+        OffsetData[18] = 3912
+        OffsetData[19] = 4060
+        OffsetData[20] = 4208
+    }
+    StripSize = 1
+}
+TrackToSkeletonMapTable[21] =
+{
+    TrackToSkeletonMapTable[0] = { BoneTreeIndex=0 }
+    TrackToSkeletonMapTable[1] = { BoneTreeIndex=1 }
+    TrackToSkeletonMapTable[2] = { BoneTreeIndex=2 }
+    TrackToSkeletonMapTable[3] = { BoneTreeIndex=3 }
+    TrackToSkeletonMapTable[4] = { BoneTreeIndex=4 }
+    TrackToSkeletonMapTable[5] = { BoneTreeIndex=5 }
+    TrackToSkeletonMapTable[6] = { BoneTreeIndex=6 }
+    TrackToSkeletonMapTable[7] = { BoneTreeIndex=7 }
+    TrackToSkeletonMapTable[8] = { BoneTreeIndex=19 }
+    TrackToSkeletonMapTable[9] = { BoneTreeIndex=20 }
+    TrackToSkeletonMapTable[10] = { BoneTreeIndex=8 }
+    TrackToSkeletonMapTable[11] = { BoneTreeIndex=9 }
+    TrackToSkeletonMapTable[12] = { BoneTreeIndex=10 }
+    TrackToSkeletonMapTable[13] = { BoneTreeIndex=11 }
+    TrackToSkeletonMapTable[14] = { BoneTreeIndex=12 }
+    TrackToSkeletonMapTable[15] = { BoneTreeIndex=13 }
+    TrackToSkeletonMapTable[16] = { BoneTreeIndex=14 }
+    TrackToSkeletonMapTable[17] = { BoneTreeIndex=15 }
+    TrackToSkeletonMapTable[18] = { BoneTreeIndex=16 }
+    TrackToSkeletonMapTable[19] = { BoneTreeIndex=17 }
+    TrackToSkeletonMapTable[20] = { BoneTreeIndex=18 }
+}
+CompressedTrackToSkeletonMapTable[21] =
+{
+    CompressedTrackToSkeletonMapTable[0] = { BoneTreeIndex=0 }
+    CompressedTrackToSkeletonMapTable[1] = { BoneTreeIndex=1 }
+    CompressedTrackToSkeletonMapTable[2] = { BoneTreeIndex=2 }
+    CompressedTrackToSkeletonMapTable[3] = { BoneTreeIndex=3 }
+    CompressedTrackToSkeletonMapTable[4] = { BoneTreeIndex=4 }
+    CompressedTrackToSkeletonMapTable[5] = { BoneTreeIndex=5 }
+    CompressedTrackToSkeletonMapTable[6] = { BoneTreeIndex=6 }
+    CompressedTrackToSkeletonMapTable[7] = { BoneTreeIndex=7 }
+    CompressedTrackToSkeletonMapTable[8] = { BoneTreeIndex=19 }
+    CompressedTrackToSkeletonMapTable[9] = { BoneTreeIndex=20 }
+    CompressedTrackToSkeletonMapTable[10] = { BoneTreeIndex=8 }
+    CompressedTrackToSkeletonMapTable[11] = { BoneTreeIndex=9 }
+    CompressedTrackToSkeletonMapTable[12] = { BoneTreeIndex=10 }
+    CompressedTrackToSkeletonMapTable[13] = { BoneTreeIndex=11 }
+    CompressedTrackToSkeletonMapTable[14] = { BoneTreeIndex=12 }
+    CompressedTrackToSkeletonMapTable[15] = { BoneTreeIndex=13 }
+    CompressedTrackToSkeletonMapTable[16] = { BoneTreeIndex=14 }
+    CompressedTrackToSkeletonMapTable[17] = { BoneTreeIndex=15 }
+    CompressedTrackToSkeletonMapTable[18] = { BoneTreeIndex=16 }
+    CompressedTrackToSkeletonMapTable[19] = { BoneTreeIndex=17 }
+    CompressedTrackToSkeletonMapTable[20] = { BoneTreeIndex=18 }
+}
+CompressedCurveData = { FloatCurves[0]={} }
+Interpolation = Linear (0)
+AdditiveAnimType = AAT_None (0)
+RefPoseType = ABPT_AnimFrame (3)
+RetargetSource = None
+RefPoseSeq = AnimSequence4'/Game/FactoryGame/Buildable/Factory/DroneStation/Animation/FlyingIdle_01.FlyingIdle_01'
+RefFrameIndex = 0
+RetargetSourceAssetReferencePose[0] = {}
+bEnableRootMotion = false
+AuthoredSyncMarkers[0] = {}
+BakedPerBoneCustomAttributeData[0] = {}
+Notifies[0] = {}
+SequenceLength = 1.86667
+RateScale = 1
+RawCurveData = { FloatCurves[0]={} }
+Skeleton = Skeleton'/Game/FactoryGame/Buildable/Factory/DroneStation/Mesh/SK_DroneTransport_01_Skeleton.SK_DroneTransport_01_Skeleton'
+
+// Sequence: FlyingIdle_01
+NumFrames = 105
+KeyEncodingFormat = AKF_PerTrackCompression (2)
+TranslationCompressionFormat = ACF_Identity (6)
+RotationCompressionFormat = ACF_Identity (6)
+ScaleCompressionFormat = ACF_Identity (6)
+CompressedTrackOffsets[0] = {}
+CompressedScaleOffsets =
+{
+    OffsetData[21] =
+    {
+        OffsetData[0] = 0
+        OffsetData[1] = 1276
+        OffsetData[2] = 1924
+        OffsetData[3] = 2184
+        OffsetData[4] = 2380
+        OffsetData[5] = 3104
+        OffsetData[6] = 3364
+        OffsetData[7] = 3632
+        OffsetData[8] = 3900
+        OffsetData[9] = 3936
+        OffsetData[10] = 3972
+        OffsetData[11] = 4008
+        OffsetData[12] = 4044
+        OffsetData[13] = 4080
+        OffsetData[14] = 4116
+        OffsetData[15] = 4572
+        OffsetData[16] = 5980
+        OffsetData[17] = 6140
+        OffsetData[18] = 6336
+        OffsetData[19] = 6476
+        OffsetData[20] = 6616
+    }
+    StripSize = 1
+}
+TrackToSkeletonMapTable[21] =
+{
+    TrackToSkeletonMapTable[0] = { BoneTreeIndex=0 }
+    TrackToSkeletonMapTable[1] = { BoneTreeIndex=1 }
+    TrackToSkeletonMapTable[2] = { BoneTreeIndex=2 }
+    TrackToSkeletonMapTable[3] = { BoneTreeIndex=3 }
+    TrackToSkeletonMapTable[4] = { BoneTreeIndex=4 }
+    TrackToSkeletonMapTable[5] = { BoneTreeIndex=5 }
+    TrackToSkeletonMapTable[6] = { BoneTreeIndex=6 }
+    TrackToSkeletonMapTable[7] = { BoneTreeIndex=7 }
+    TrackToSkeletonMapTable[8] = { BoneTreeIndex=19 }
+    TrackToSkeletonMapTable[9] = { BoneTreeIndex=20 }
+    TrackToSkeletonMapTable[10] = { BoneTreeIndex=8 }
+    TrackToSkeletonMapTable[11] = { BoneTreeIndex=9 }
+    TrackToSkeletonMapTable[12] = { BoneTreeIndex=10 }
+    TrackToSkeletonMapTable[13] = { BoneTreeIndex=11 }
+    TrackToSkeletonMapTable[14] = { BoneTreeIndex=12 }
+    TrackToSkeletonMapTable[15] = { BoneTreeIndex=13 }
+    TrackToSkeletonMapTable[16] = { BoneTreeIndex=14 }
+    TrackToSkeletonMapTable[17] = { BoneTreeIndex=15 }
+    TrackToSkeletonMapTable[18] = { BoneTreeIndex=16 }
+    TrackToSkeletonMapTable[19] = { BoneTreeIndex=17 }
+    TrackToSkeletonMapTable[20] = { BoneTreeIndex=18 }
+}
+CompressedTrackToSkeletonMapTable[21] =
+{
+    CompressedTrackToSkeletonMapTable[0] = { BoneTreeIndex=0 }
+    CompressedTrackToSkeletonMapTable[1] = { BoneTreeIndex=1 }
+    CompressedTrackToSkeletonMapTable[2] = { BoneTreeIndex=2 }
+    CompressedTrackToSkeletonMapTable[3] = { BoneTreeIndex=3 }
+    CompressedTrackToSkeletonMapTable[4] = { BoneTreeIndex=4 }
+    CompressedTrackToSkeletonMapTable[5] = { BoneTreeIndex=5 }
+    CompressedTrackToSkeletonMapTable[6] = { BoneTreeIndex=6 }
+    CompressedTrackToSkeletonMapTable[7] = { BoneTreeIndex=7 }
+    CompressedTrackToSkeletonMapTable[8] = { BoneTreeIndex=19 }
+    CompressedTrackToSkeletonMapTable[9] = { BoneTreeIndex=20 }
+    CompressedTrackToSkeletonMapTable[10] = { BoneTreeIndex=8 }
+    CompressedTrackToSkeletonMapTable[11] = { BoneTreeIndex=9 }
+    CompressedTrackToSkeletonMapTable[12] = { BoneTreeIndex=10 }
+    CompressedTrackToSkeletonMapTable[13] = { BoneTreeIndex=11 }
+    CompressedTrackToSkeletonMapTable[14] = { BoneTreeIndex=12 }
+    CompressedTrackToSkeletonMapTable[15] = { BoneTreeIndex=13 }
+    CompressedTrackToSkeletonMapTable[16] = { BoneTreeIndex=14 }
+    CompressedTrackToSkeletonMapTable[17] = { BoneTreeIndex=15 }
+    CompressedTrackToSkeletonMapTable[18] = { BoneTreeIndex=16 }
+    CompressedTrackToSkeletonMapTable[19] = { BoneTreeIndex=17 }
+    CompressedTrackToSkeletonMapTable[20] = { BoneTreeIndex=18 }
+}
+CompressedCurveData = { FloatCurves[0]={} }
+Interpolation = Linear (0)
+AdditiveAnimType = AAT_None (0)
+RefPoseType = ABPT_None (0)
+RetargetSource = None
+RefPoseSeq = None
+RefFrameIndex = 0
+RetargetSourceAssetReferencePose[0] = {}
+bEnableRootMotion = false
+AuthoredSyncMarkers[0] = {}
+BakedPerBoneCustomAttributeData[0] = {}
+Notifies[0] = {}
+SequenceLength = 3.46667
+RateScale = 1
+RawCurveData = { FloatCurves[0]={} }
+Skeleton = Skeleton'/Game/FactoryGame/Buildable/Factory/DroneStation/Mesh/SK_DroneTransport_01_Skeleton.SK_DroneTransport_01_Skeleton'

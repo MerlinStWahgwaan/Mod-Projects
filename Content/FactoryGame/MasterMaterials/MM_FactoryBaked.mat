@@ -1,0 +1,5 @@
+Diffuse=T_PowerPoleWall_Reflection
+Normal=TX_TrainTrack_N
+Other[0]=TX_TrainTrack_BC
+Other[1]=16bits
+Other[2]=GrayDarkTextureCube
