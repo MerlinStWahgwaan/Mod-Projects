@@ -1,6 +1,6 @@
 ﻿#include "Module/WorldModuleManager.h"
-
 #include "FGGameMode.h"
+#include "FGGameState.h"
 #include "GameFramework/GameStateBase.h"
 #include "Engine/Engine.h"
 #include "Engine/World.h"
@@ -8,25 +8,10 @@
 #include "ModLoading/PluginModuleLoader.h"
 #include "Module/GameWorldModule.h"
 #include "Module/MenuWorldModule.h"
+#include "Registry/ModContentRegistry.h"
+#include "Subsystem/SubsystemActorManager.h"
 
-AWorldModuleManager* AWorldModuleManager::Get(UObject* WorldContext) {
-    UWorld* World = GEngine->GetWorldFromContextObject(WorldContext, EGetWorldErrorMode::Assert);
-    AGameStateBase* GameState = World->GetGameState();
-    check(GameState);
-    UWorldModuleManagerComponent* ModuleManagerComponent = GameState->FindComponentByClass<UWorldModuleManagerComponent>();
-    
-    if (ModuleManagerComponent == NULL) {
-        //World Module Manager has not been initialized yet, perform lazy initialization
-        ModuleManagerComponent = NewObject<UWorldModuleManagerComponent>(GameState, TEXT("WorldModuleManagerComponent"));
-        check(ModuleManagerComponent);
-        ModuleManagerComponent->SpawnModuleManager();
-        ModuleManagerComponent->RegisterComponent();
-    }
-    
-    return ModuleManagerComponent->GetModuleManager();
-}
-
-UWorldModule* AWorldModuleManager::FindModule(const FName& ModReference) const {
+UWorldModule* UWorldModuleManager::FindModule(const FName& ModReference) const {
     UWorldModule* const* WorldModule = RootModuleMap.Find(ModReference);
     if (WorldModule != NULL) {
         return *WorldModule;
@@ -34,31 +19,58 @@ UWorldModule* AWorldModuleManager::FindModule(const FName& ModReference) const {
     return NULL;
 }
 
-void AWorldModuleManager::RegisterModuleManager() {
-    //Spawn mod modules as soon as world actors are initialized (e.g static map objects are spawned)
-    FWorldDelegates::OnWorldInitializedActors.AddLambda([](const UWorld::FActorsInitializedParams Params) {
-        if (FPluginModuleLoader::ShouldLoadModulesForWorld(Params.World)) {
-            AWorldModuleManager* ModuleManager = AWorldModuleManager::Get(Params.World);
-            ModuleManager->Initialize();
-        }
-    });
-    
-    //Post initialize mod modules when world is fully loaded and is ready to be used
-    FCoreUObjectDelegates::PostLoadMapWithWorld.AddLambda([](UWorld* World){
-        if (FPluginModuleLoader::ShouldLoadModulesForWorld(World)) {
-            AWorldModuleManager* ModuleManager = AWorldModuleManager::Get(World);
-            ModuleManager->PostInitialize();
-        }
-    });
+void UWorldModuleManager::WaitForGameState(FLatentActionInfo& LatentInfo) {
+	
 }
 
-void AWorldModuleManager::Initialize() {
+bool UWorldModuleManager::ShouldCreateSubsystem(UObject* Outer) const {
+	UWorld* WorldOuter = CastChecked<UWorld>(Outer);
+	return FPluginModuleLoader::ShouldLoadModulesForWorld(WorldOuter);
+}
+
+void UWorldModuleManager::Initialize(FSubsystemCollectionBase& Collection) {
+	//Make sure USubsystemActorManager is initialized before us, so it registers OnActorsInitialized
+	//callback earlier and gets vanilla systems registered before modules are constructed
+	Collection.InitializeDependency(USubsystemActorManager::StaticClass());
+	
+	UWorld* OuterWorld = GetWorld();
+	OuterWorld->OnActorsInitialized.AddUObject(this, &UWorldModuleManager::InitializeModules);
+	OuterWorld->OnWorldBeginPlay.AddUObject(this, &UWorldModuleManager::PostInitializeModules);
+}
+
+void UWorldModuleManager::InitializeModules(const UWorld::FActorsInitializedParams&) {
+	//I don't know why it's needed, apparently OnActorsInitialized delegate for some reason just
+	//doesn't give a shit about order of registration of the delegates
+	USubsystemActorManager* SubsystemActorManager = GetWorld()->GetSubsystem<USubsystemActorManager>();
+	SubsystemActorManager->MakeSureNativeSubsystemsRegistered();
+	
+	//We cannot construct modules earlier because before that moment world just lacks
+	//information about it's type and authority game mode object on host
+	ConstructModules();
+
+	DispatchLifecycleEvent(ELifecyclePhase::INITIALIZATION);
+	NotifyContentRegistry();
+}
+
+void UWorldModuleManager::PostInitializeModules() {
+	DispatchLifecycleEvent(ELifecyclePhase::POST_INITIALIZATION);
+}
+
+void UWorldModuleManager::NotifyContentRegistry() {
+	AModContentRegistry* ContentRegistry = AModContentRegistry::Get(this);
+
+	//Notify content registry only if it's available (for example, it is not available in main menu)
+	if (ContentRegistry != NULL) {
+		ContentRegistry->NotifyModuleRegistrationFinished();
+	}
+}
+
+void UWorldModuleManager::ConstructModules() {
     //Use game world module by default
     TSubclassOf<UWorldModule> ModuleTypeClass = UGameWorldModule::StaticClass();
 
-    //Use MenuWorldModule if we have a game mode and it is set to main menu
-    AFGGameMode* GameMode = Cast<AFGGameMode>(GetWorld()->GetAuthGameMode());
-    if (GameMode != NULL && GameMode->IsMainMenuGameMode()) {
+    //Use MenuWorldModule if we are in the main menu
+    if (FPluginModuleLoader::IsMainMenuWorld(GetWorld())) {
         ModuleTypeClass = UMenuWorldModule::StaticClass();
     }
 
@@ -85,17 +97,11 @@ void AWorldModuleManager::Initialize() {
     
     UE_LOG(LogSatisfactoryModLoader, Log, TEXT("Discovered %d world modules of class %s"), AlreadyLoadedMods.Num(), *ModuleTypeClass->GetName());
     
-    //Dispatch lifecycle events in a sequence
+    //Dispatch construction lifecycle event
     DispatchLifecycleEvent(ELifecyclePhase::CONSTRUCTION);
-    DispatchLifecycleEvent(ELifecyclePhase::INITIALIZATION);
 }
 
-void AWorldModuleManager::PostInitialize() {
-    //Finish loading and dispatch post init now
-    DispatchLifecycleEvent(ELifecyclePhase::POST_INITIALIZATION);
-}
-
-void AWorldModuleManager::CreateRootModule(const FName& ModReference, TSubclassOf<UWorldModule> ObjectClass) {
+void UWorldModuleManager::CreateRootModule(const FName& ModReference, TSubclassOf<UWorldModule> ObjectClass) {
     //Allocate module object and set mod reference
     UWorldModule* RootWorldModule = NewObject<UWorldModule>(this, ObjectClass, ModReference);
     check(RootWorldModule);
@@ -106,7 +112,7 @@ void AWorldModuleManager::CreateRootModule(const FName& ModReference, TSubclassO
     RootModuleList.Add(RootWorldModule);
 }
 
-void AWorldModuleManager::DispatchLifecycleEvent(ELifecyclePhase Phase) {
+void UWorldModuleManager::DispatchLifecycleEvent(ELifecyclePhase Phase) {
     //Notify log of our current loading phase, in case of things going wrong
     UE_LOG(LogSatisfactoryModLoader, Log, TEXT("Dispatching lifecycle event %s to world %s modules"), 
         *UModModule::LifecyclePhaseToString(Phase), *GetWorld()->GetMapName());
@@ -117,10 +123,31 @@ void AWorldModuleManager::DispatchLifecycleEvent(ELifecyclePhase Phase) {
     }
 }
 
-void UWorldModuleManagerComponent::SpawnModuleManager() {
-    FActorSpawnParameters SpawnParams;
-    SpawnParams.Owner = GetOwner();
-    SpawnParams.Name = TEXT("WorldModuleManager");
-    this->ModuleManager = GetWorld()->SpawnActor<AWorldModuleManager>(SpawnParams);
-    check(ModuleManager);
+void FWaitForGameStateLatentAction::UpdateOperation(FLatentResponse& Response) {
+	UWorld* WorldObject = TargetWorld.Get();
+	bool bHasCompleted = false;
+
+	if (WorldObject) {
+		AGameStateBase* GameState = WorldObject->GetGameState();
+		if (GameState != NULL) {
+			//If Game State represents Factory Game State, we want to also wait until all client subsystems are valid
+			if (AFGGameState* FactoryGameState = Cast<AFGGameState>(GameState)) {
+				bHasCompleted = FactoryGameState->AreClientSubsystemsValid();
+			} else {
+				//Otherwise we are completed as soon as game state is replicated to the client
+				bHasCompleted = true;
+			}
+		}
+	} else {
+		//World objet has been garbage collected, we need to complete anyway
+		bHasCompleted = true;
+	}
+
+	Response.FinishAndTriggerIf(bHasCompleted, ExecutionFunction, OutputLink, CallbackTarget);
 }
+
+#if WITH_EDITOR
+FString FWaitForGameStateLatentAction::GetDescription() const {
+	return TEXT("Wait For GameState");
+}
+#endif

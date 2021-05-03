@@ -1,12 +1,12 @@
 ﻿#pragma once
 #include "CoreMinimal.h"
-#include "GameFramework/Info.h"
+#include "LatentActions.h"
 #include "Module/WorldModule.h"
 #include "WorldModuleManager.generated.h"
 
 /** Manages registered world modules and their lifecycle events */
 UCLASS(NotBlueprintable)
-class SML_API AWorldModuleManager : public AInfo {
+class SML_API UWorldModuleManager : public UWorldSubsystem {
     GENERATED_BODY()
 private:
     /** Root map of modules for every registered mod reference */
@@ -17,24 +17,31 @@ private:
     UPROPERTY()
     TArray<UWorldModule*> RootModuleList;
 public:
-    /** Retrieves world module manager for provided world */
-    UFUNCTION(BlueprintPure)
-    static AWorldModuleManager* Get(UObject* WorldContext); 
-    
     /** Retrieves world module by provided mod reference */
     UFUNCTION(BlueprintPure)
     UWorldModule* FindModule(const FName& ModReference) const;
+
+	/**
+	 * Waits until Game State Actor is fully Replicated and Available for retrieval via Get Game State function.
+	 * Also waits until Factory Game client subsystems are fully replicated before returning
+	 */
+	UFUNCTION(BlueprintCallable, meta = (Latent, LatentInfo = "LatentInfo"))
+    static void WaitForGameState(struct FLatentActionInfo& LatentInfo);
+
+    virtual bool ShouldCreateSubsystem(UObject* Outer) const override;
+    virtual void Initialize(FSubsystemCollectionBase& Collection) override;
 private:
-    friend class UModLoadingLibrary;
-    
-    /** Registers world module manager */
-    static void RegisterModuleManager();
-    
+	/** Called very early to construct module objects, right after world initialization */
+	void ConstructModules();
+	
     /** Called when world actors have been initialized */
-    void Initialize();
+    void InitializeModules(const UWorld::FActorsInitializedParams& Params);
 
     /** Called when world post initialization has been completed */
-    void PostInitialize();
+    void PostInitializeModules();
+
+	/** Notifies content registry that modded content registration has been finished */
+	void NotifyContentRegistry();
     
     /** Allocates root module object for instance and registers it */
     void CreateRootModule(const FName& ModReference, TSubclassOf<UWorldModule> ObjectClass);
@@ -43,13 +50,23 @@ private:
     void DispatchLifecycleEvent(ELifecyclePhase Phase);
 };
 
-UCLASS()
-class SML_API UWorldModuleManagerComponent : public UActorComponent {
-    GENERATED_BODY()
+class SML_API FWaitForGameStateLatentAction final : public FPendingLatentAction {
 private:
-    UPROPERTY()
-    AWorldModuleManager* ModuleManager;
+	FName ExecutionFunction;
+	int32 OutputLink;
+	FWeakObjectPtr CallbackTarget;
+	TWeakObjectPtr<UWorld> TargetWorld;
+	
 public:
-    void SpawnModuleManager();
-    FORCEINLINE AWorldModuleManager* GetModuleManager() const { return ModuleManager; }
+	FORCEINLINE explicit FWaitForGameStateLatentAction(const FLatentActionInfo& LatentInfo, UWorld* InTargetWorld):
+            ExecutionFunction(LatentInfo.ExecutionFunction),
+            OutputLink(LatentInfo.Linkage),
+            CallbackTarget(LatentInfo.CallbackTarget),
+			TargetWorld(InTargetWorld) {}
+
+	virtual void UpdateOperation(FLatentResponse& Response) override;
+
+#if WITH_EDITOR
+	virtual FString GetDescription() const override;
+#endif
 };

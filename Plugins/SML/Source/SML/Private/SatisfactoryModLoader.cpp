@@ -11,7 +11,6 @@
 #include "Network/SMLConnection/SMLNetworkManager.h"
 #include "Patching/Patch/CheatManagerPatch.h"
 #include "Player/SMLRemoteCallObject.h"
-#include "Registry/SubsystemHolderRegistry.h"
 #include "Patching/Patch/MainMenuPatch.h"
 #include "Patching/Patch/OfflinePlayerHandler.h"
 #include "Patching/Patch/OptionsKeybindPatch.h"
@@ -22,8 +21,8 @@
 #define SML_BUILD_METADATA "unknown"
 #endif
 
-extern "C" DLLEXPORT const TCHAR* modLoaderVersionString = TEXT("3.0.0+") TEXT(SML_BUILD_METADATA);
-extern "C" DLLEXPORT const long targetGameVersion = 150216;
+extern "C" DLLEXPORT const TCHAR* modLoaderVersionString = TEXT("3.1.0+") TEXT(SML_BUILD_METADATA);
+extern "C" DLLEXPORT const long targetGameVersion = 151773;
 
 DEFINE_LOG_CATEGORY(LogSatisfactoryModLoader);
 
@@ -104,9 +103,6 @@ void FSatisfactoryModLoader::CheckGameVersion() {
 }
 
 void FSatisfactoryModLoader::RegisterSubsystemPatches() {
-    //Initialize patches required for subsystem holder registry to function
-    USubsystemHolderRegistry::InitializePatches();
-    
     //Disable vanilla content resolution by patching vanilla lookup methods
     AModContentRegistry::DisableVanillaContentRegistration();
 
